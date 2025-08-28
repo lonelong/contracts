@@ -1,0 +1,75 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "tag",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "dataHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "DataWritten",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes[]", "name": "items", "type": "bytes[]" },
+      { "internalType": "bytes32", "name": "tag", "type": "bytes32" }
+    ],
+    "name": "writeBatch",
+    "outputs": [
+      { "internalType": "bytes32[]", "name": "hashs", "type": "bytes32[]" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes", "name": "data", "type": "bytes" },
+      { "internalType": "bytes32", "name": "tag", "type": "bytes32" }
+    ],
+    "name": "writeBytes",
+    "outputs": [
+      { "internalType": "bytes32", "name": "hash", "type": "bytes32" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes", "name": "text", "type": "bytes" },
+      { "internalType": "bytes32", "name": "tag", "type": "bytes32" }
+    ],
+    "name": "writeString",
+    "outputs": [
+      { "internalType": "bytes32", "name": "hash", "type": "bytes32" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,0 +1,11 @@
+type DataWritten @entity(immutable: true) {
+  id: Bytes!
+  sender: Bytes! # address
+  tag: Bytes! # bytes32
+  data: Bytes! # bytes
+  dataHash: Bytes! # bytes32
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
